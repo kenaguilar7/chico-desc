@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description>Nuevo script vacio.</Description>
+  <Id>11da1488-c981-40f0-854e-3de7bc7eb166</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs />
+        <Id>4baf4241-1008-4e88-a9b0-bfa34429669e</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i4">
+            <PropertyName>DirPath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads")</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i5">
+            <PropertyName>ListFilesOrCatalogs</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>archivosEnDescargas</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId>0</SelectedOptionId>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>Activities.Files.GetListFilesOrCatalogs</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i6" i:type="ExecutedStep">
+        <Childs />
+        <Id>bdbbecf2-f8c9-485a-ad37-53e5f57af712</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i7">
+            <PropertyName>Value</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>archivosEnDescargas.Find(x=&gt;x.Contains("CO-INVRPT-"))</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i8">
+            <PropertyName>To</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>rutaDeArchivoDescargado</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Crear ruta de archivo descargado</Text>
+        <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i9" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i10" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i11" i:type="ExecutedStep">
+                <Childs />
+                <Id>23120817-4f91-4d0c-9771-9076b84fa516</Id>
+                <Parent z:Ref="i10" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i12">
+                    <PropertyName>Count</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>5</_expression>
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <EnableStatus>false</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.Sleep</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i13" i:type="ExecutedStep">
+                <Childs />
+                <Id>32989500-e6fe-4fc7-aaba-a3c96fadbf74</Id>
+                <Parent z:Ref="i10" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i14">
+                    <PropertyName>Value</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>true</_expression>
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i15">
+                    <PropertyName>To</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>ArchivoDescargadoExitosamente</_expression>
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i16" i:type="ExecutedStep">
+                <Childs />
+                <Id>36ddda50-97fb-40e2-af77-1c2fe3ce1580</Id>
+                <Parent z:Ref="i10" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i17">
+                    <PropertyName>PathFrom</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>rutaDeArchivoDescargado</_expression>
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i18">
+                    <PropertyName>PathTo</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>@"Data\ArchivosTemporales"</_expression>
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i19">
+                    <PropertyName>WithDeleteFrom</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:boolean">true</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i20">
+                    <PropertyName>WithDeleteTo</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_value xmlns:d11p1="http://www.w3.org/2001/XMLSchema" i:type="d11p1:boolean">true</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Files.CopyFileCatalog</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>a0839853-3893-46a6-b677-e094993b13c1</Id>
+            <Parent z:Ref="i9" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i21" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i22" i:type="ExecutedStep">
+                <Childs />
+                <Id>1281a5ad-0bcb-41ea-b03a-3b12abbd78bb</Id>
+                <Parent z:Ref="i21" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i23">
+                    <PropertyName>Value</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>false</_expression>
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i24">
+                    <PropertyName>To</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>ArchivoDescargadoExitosamente</_expression>
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>22eea409-732c-4aed-82b4-bb12b8106bb7</Id>
+            <Parent z:Ref="i9" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>4a6ac8d4-9174-4f6b-b945-edfeda855917</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i25">
+            <PropertyName>Condition</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>!string.IsNullOrEmpty(rutaDeArchivoDescargado)</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.If</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>5e8d4181-fc43-48fd-9c5d-49e4a1debccd</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text></Text>
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>ValidarArchivoDescargado.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params>
+    <Parameter z:Id="i26">
+      <DefaultValueExpression>@"Data\ArchivosTemporales"</DefaultValueExpression>
+      <Description></Description>
+      <Name>folderConArchivosDescargadosPorProcess</Name>
+      <RunnerType>Freeze</RunnerType>
+      <TypeString>System.String</TypeString>
+    </Parameter>
+    <Parameter z:Id="i27">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>ArchivoDescargadoExitosamente</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Boolean</TypeString>
+    </Parameter>
+  </Params>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params" />
+  <Version i:nil="true" />
+</Script>
